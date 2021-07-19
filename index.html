@@ -1,0 +1,108 @@
+<!-- 
+    !TODO:
+    - [x] Add a video/audio to the webpage
+    - [x] Use local links, lists, or tables
+    - [x] Use HTML forms
+    - [x] Use semantic tags
+    - [x] Create the navbar: home, about, work, resume, contact
+    - [x] Create the “about” section,”work” section,”resume” section,”contact” section (Using HTML Forms) 
+    - [x] Create the page footer
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Page Title -->
+    <title>Document</title>
+
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- Document Header -->
+    <header>
+      <a href="/">Jedidiah Amaraegbu</a>
+      <nav aria-label="Header navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Document Main Content -->
+    <main>
+      <section id="about">
+        <h2>About</h2>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/SQ2vMppVmcc"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <p>
+          I am passionate about helping businesses and individuals create more
+          value with software and helping students learn software development. I
+          spoke at Student Build 2020, a student conference organized by
+          Geekulcha & Microsoft Student Partners in South Africa. I am the
+          national bronze medalist for the iCreate Skills Festival 2019: Web
+          Category. Currently, I am a FullStack Software Developer at eConnect
+          Net Power Limited. My skills include: HTML5, CSS3, BootStrap,
+          Javascript, React, Redux, React Native, Express, Node, PostgreSQL,
+          MongoDB. Contact me if you need a website, web app, mobile app for
+          your business/idea, a web tutor, or a conference speaker?
+        </p>
+      </section>
+      <section id="work">
+        <h2>Work</h2>
+        <p>
+          My work details can be found
+          <a href="https://www.linkedin.com/in/am-jedidiah/">here</a>
+        </p>
+      </section>
+      <section id="resume">
+        <h2>Resume</h2>
+        <p>
+          You can find my repo
+          <a
+            href="https://drive.google.com/file/d/1k75s3uSimXxJ2M1vAf0t7ZdnJq7qejGx/view?usp=sharing"
+            >here</a
+          >
+        </p>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <article>
+          <h3>Fiil this form to get in touch</h3>
+          <form>
+            <input
+              type="email"
+              placeholder="example@gmail.com"
+              aria-label="Email"
+            />
+            <input type="text" placeholder="Name" aria-label="Name" />
+            <textarea placeholder="Message"></textarea>
+            <input type="submit" value="Send" aria-label="Send" />
+          </form>
+        </article>
+      </section>
+    </main>
+    <aside>Welcome to my personal website.</aside>
+
+    <!-- Document Footer -->
+    <footer>
+      <p>&copy; 2021 GoMyCode HTML</p>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
