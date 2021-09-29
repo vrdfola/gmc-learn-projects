@@ -1,0 +1,58 @@
+/********** TICKET **********/
+
+/*
+    Determine Ticket Price.
+    If age is under 16, ticket price, is half original price, elseticket price remains the same
+*/
+ALGORITHM ticketPrice1
+VAR
+    age:- INTEGER
+    ticketPrice:- INTEGER:- 2000
+BEGIN
+    IF (age < 16) THEN
+        ticketPrice = ticketPrice / 2
+    END_IF
+END
+
+ALGORITHM ticketPrice2
+VAR
+    age:- INTEGER
+    ticketPrice:- INTEGER:- 2000
+BEGIN
+    IF (age < 16) THEN
+        ticketPrice = ticketPrice / 2
+    ELSE
+        ticketPrice = ticketPrice
+    END_IF
+END
+
+ALGORITHM ticketPrice3
+VAR
+    age:- INTEGER
+    ticketPrice:- INTEGER:- 2000
+BEGIN
+    SWITCH (age) DO
+        16 : ticketPrice = ticketPrice / 2
+        DEFAULT : ticketPrice = ticketPrice
+    END_SWITCH
+END
+
+
+/* 
+    Well let's try to make it a little harder, we'll have three test cases:
+    a case where the age is under 10, the passenger will pay only 20% of the real price;
+    a case where the age is between 10 and 16, the passenger will pay 50% of the ticket price.
+    a case where the age is above 16, the passenger will pay a full ticket.
+    The solution will look like: 
+*/
+ALGORITHM ticketPrice4
+VAR
+    age:- INTEGER
+    ticketPrice:- INTEGER:- 2000
+BEGIN
+    SWITCH (age) DO
+        10 : ticketPrice = ticketPrice * 0.2
+        16 : ticketPrice = ticketPrice * 0.5
+        DEFAULT : ticketPrice = ticketPrice
+    END_SWITCH
+END

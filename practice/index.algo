@@ -1,0 +1,101 @@
+/*
+    Variable & Identifier Declaration
+*/
+name := "Jedidiah"
+myName := name
+age := 2021 - 1996
+// TODO: Check line below
+myAge := findMyAge(2021, 1996)
+
+/*
+    Variable Types: Boolean, Integer, Float, Char, String
+*/
+ALGORITHM types
+VAR
+    i : INTEGER := 26;
+    f : FLOAT := 4.56;
+    c : CHAR := 'c';
+    s : STRING := 'str';
+    b : BOOLEAN := TRUE;
+BEGIN
+    f := i; // correct
+    i := f; // wrong
+    // we cannot mix types
+    f := c; // wrong
+    s := c; // wrong
+    b := i; // wrong
+END
+
+/*
+    ARITHMETIC INSTRUCTIONS
+    Addition -> outcome := a+b
+    Subtraction -> outcome := a-b
+    Multiplication -> outcome := a*b
+    Division -> outcome := a/b
+    Modulo -> outcome := a%b
+*/
+outcome := 1 + 2
+outcome := 1 - 2
+outcome := 1 * 2
+outcome := 1 / 2
+outcome := 1 % 2
+
+/*
+    LOGICAL INSTRUCTIONS
+    Not -> outcome := NOT a
+    Or -> outcome := a OR b
+    And -> outcome := a AND b
+    Equals -> outcome := a = b
+    Not Equals -> outcome := a <> b
+    Greater Than -> outcome := a > b
+    Greater Than Or Equals -> outcome := a >= b
+    Less Than -> outcome := a < b
+    Less Than Or Equals -> outcome := a <= b
+*/
+outcome := NOT TRUE
+outcome := TRUE OR FALSE
+outcome := TRUE AND FALSE
+outcome := 1 = 2
+outcome := 1 <> 2
+outcome := 1 > 2
+outcome := 1 >= 2
+outcome := 1 < 2
+outcome := 1 <= 2
+
+/*
+    IF STATEMENT
+*/
+ALGORITHM ifStatement
+VAR
+    a : INTEGER := 1;
+    b : INTEGER := 2;
+    c : INTEGER := 3;
+BEGIN
+    IF a > b THEN
+        c := a + b;
+    ELSE
+        c := a - b;
+    END IF;
+END
+
+/*
+    SWITCH INSTRUCTION
+*/
+ALGORITHM switchStatement
+VAR
+    a : INTEGER := 1;
+    b : INTEGER := 2;
+    c : INTEGER := 3;
+BEGIN
+    SWITCH a
+        CASE 1
+            c := a + b; 
+        CASE 2
+            c := a - b;
+        DEFAULT
+            c := a * b;
+    END SWITCH;
+END
+
+
+

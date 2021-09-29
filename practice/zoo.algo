@@ -1,0 +1,25 @@
+/*
+    Now let's try to resolve another problem using the switch statement.
+    Our problem is, we are going to print the opening hours of a zoo. The problem here is that the zoo opens at a different time according to the season. Example if it is summer the door get opened at 10:00 and close at 20:00
+    if it is winter it open at 10:00 and closed at 16:00
+    Now since we only have four seasons, we are going to represent these season as shown below
+    1 refer to winter
+    2 refer to spring
+    3 refer to summer
+    4 refer to autumn
+    And here is the solution to this problem:
+*/
+ALGORITHM openingHours
+VAR
+    season: INTEGER
+    message: STRING
+BEGIN
+    SWITCH (season)
+        CASE 1: message := "10h00 to 16h00"; BREAK;
+        CASE 2: message := "10h00 to 18h00"; BREAK;
+        CASE 3: message := "10h00 to 20h00"; BREAK;
+        CASE 4: message := "10h00 to 16h00"; BREAK;
+        DEFAULT: message := "Invalid season selection"
+    END_SWITCH
+    Write(message)
+END
