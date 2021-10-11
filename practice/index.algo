@@ -97,5 +97,8 @@ BEGIN
     END SWITCH;
 END
 
-
+/*
+    ARRAYS
+    array_name: 
+*/
 
