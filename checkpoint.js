@@ -11,31 +11,17 @@ The last character is the point.
 Use three variables as counters.
 */
 // const sentence = 'The quick brown fox jumps over the lazy dog.';
-
-function countCharacters(sentence) {
-    return sentence.length;
-}
-
-function countWords(sentence) {
-    return sentence.split(' ').length;
-}
-
-function countVowels(sentence) {
+function counter(sentence, sentenceLength = 0, wordCount = 0, vowelCount = 0) {
     const vowels = ['a', 'e', 'i', 'o', 'u'];
-    let numOfVowels = 0;
+
+    sentenceLength = sentence.length;
+    wordCount = sentence.split(' ').length;
+
     for (let letter of sentence) {
         if (vowels.includes(letter.toLowerCase())) {
-            numOfVowels++;
+            vowelCount++;
         }
     }
-    return numOfVowels;
-}
 
-function counter() {
-    const sentence = 'The quick brown fox jumps over the lazy dog.';
-    const characters = countCharacters(sentence);
-    const words = countWords(sentence);
-    const vowels = countVowels(sentence);
-
-    return {characters, words, vowels};
+    return [sentenceLength, wordCount, vowelCount];
 }

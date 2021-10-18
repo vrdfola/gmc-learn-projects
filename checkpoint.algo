@@ -15,7 +15,30 @@ Use three variables as counters.
 ALGORITHM counter
 VAR
     sentence:- ARRAY_OF STRING;
-    characters, words, vowels:- INTEGER
+
+    sentenceLength: INTEGER:= 0;
+    wordCount: INTEGER:= 0;
+    vowelCount: INTEGER:= 0;
+    vowels: ARRAY_OF CHAR:= ['a', 'e', 'i', 'o', 'u'];
 BEGIN
-    FOR i FROM 0 TO sentence.length-1 STEP 1  DO
+    sentenceLength := sentence.length;
+
+    FOR i:= 0 TO sentenceLength-1 DO
+    BEGIN
+        IF sentence[i] = ' ' THEN
+        BEGIN
+            wordCount := wordCount + 1;
+        END;
+    END;
+
+    FOR i:= 0 TO sentenceLength-1 DO
+    BEGIN
+        FOR j:= 0 TO vowels.length-1 DO
+        BEGIN
+            IF sentence[i] = vowels[j] THEN
+            BEGIN
+                vowelCount := vowelCount + 1;
+            END;
+        END;
+    END;
 END
