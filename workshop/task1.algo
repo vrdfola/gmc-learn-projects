@@ -1,0 +1,15 @@
+// Write an algorithm that reassigns values as such: x = y, y = z, z = x
+ALGORITHM circular_permutation
+VAR
+    x, y, z: INTEGER
+    temp: INTEGER
+BEGIN
+    Read(x, y, z)
+
+    temp := x
+    x := y;
+    y := z;
+    z := temp;
+
+    Write(x, y, z)
+END
