@@ -1,4 +1,9 @@
-// Write an algorithm that reassigns values as such: x = y, y = z, z = x
+// We consider three integer variables x, y and z.
+// We define the circular permutation between x, y and z as the operation which gives x the  value of y,
+// at y the value of z and at z the value of x.
+// Write an algorithm allowing circular permutation between x, y and z.
+// The algorithm should read  the 3 values then display them after permutations.
+// Example: if x = 3 y = -1 and z = 7, we will have after permutations: x = -1, y = 7 and z = 3.
 ALGORITHM circular_permutation
 VAR
     x, y, z: INTEGER
